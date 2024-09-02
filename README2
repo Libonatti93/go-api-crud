@@ -1,0 +1,20 @@
+Code Explanation
+Data Model (Product): A product has an ID, name, and price.
+CRUD Endpoints:
+GET /products: Lists all products.
+GET /products/:id: Gets a specific product by ID.
+POST /products: Creates a new product.
+PUT /products/:id: Updates an existing product.
+DELETE /products/:id: Deletes a product by ID.
+Gin Server: Uses the Gin framework to create routes and handle HTTP requests.
+
+Testing the API
+To test the API, you can use tools like Postman, Insomnia, or curl in the terminal:
+
+List Products: curl http://localhost:8080/products
+curl -X POST -H "Content-Type: application/json" -d '{"name":"Produto A","price":19.99}' http://localhost:8080/products
+
+
+Update Product:
+curl -X PUT -H "Content-Type: application/json" -d '{"name":"Produto B","price":29.99}' http://localhost:8080/products/1
+Delete Product: curl -X DELETE http://localhost:8080/products/1
